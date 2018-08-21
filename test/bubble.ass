@@ -1,0 +1,215 @@
+### exported: Tue Aug 21 22:48:56 2018
+### from:     Arnold 5.1.1.0 [e338d869] darwin clang-5.0.0 oiio-1.7.17 osl-1.9.0 vdb-4.0.0 clm-1.0.3.513 rlm-12.2.2 2018/05/22 13:19:57
+### host app: MtoA 3.0.1 bf13ff9e (master) Maya 2018
+### user: sosoyan
+### render_layer: defaultRenderLayer
+### scene: /Users/sosoyan/Documents/maya/projects/default/scenes/bubble.mb
+
+
+
+options
+{
+ AA_samples 0
+ AA_samples_max 8
+ outputs "RGBA RGBA defaultArnoldFilter@gaussian_filter defaultArnoldDriver@driver_exr.RGBA"
+ xres 512
+ yres 512
+ texture_per_file_stats on
+ texture_searchpath "/Users/sosoyan/Documents/maya/projects/default/sourceimages"
+ texture_automip off
+ camera "perspShape"
+ frame 1
+ procedural_searchpath "/Users/sosoyan/Documents/maya/projects/default/"
+ GI_diffuse_depth 1
+ GI_specular_depth 2
+ GI_transmission_depth 8
+ declare render_layer constant STRING
+ render_layer "defaultRenderLayer"
+}
+
+gaussian_filter
+{
+ name defaultArnoldFilter@gaussian_filter
+}
+
+driver_exr
+{
+ name defaultArnoldDriver@driver_exr.RGBA
+ filename "/Users/sosoyan/Documents/maya/projects/default/images/bubble.exr"
+ color_space ""
+}
+
+persp_camera
+{
+ name perspShape
+ matrix
+ 0.785856903 0 -0.618408382 0
+ -0.194568545 0.949215055 -0.247252509 0
+ 0.587002575 0.314627916 0.745947242 0
+ 1.80934334 2.05751657 2.29926538 1
+ near_clip 0.100000001
+ far_clip 10000
+ screen_window_min -1 -1
+ screen_window_max 1 1
+ shutter_start 0
+ shutter_end 0
+ shutter_type "box"
+ rolling_shutter "off"
+ rolling_shutter_duration 0
+ motion_start 0
+ motion_end 0
+ exposure 0
+ fov 54.4322243
+ declare maya_full_name constant STRING
+ maya_full_name "|persp|perspShape"
+}
+
+quad_light
+{
+ name areaLightShape
+ matrix
+ 1 0 0 0
+ 0 1 0 0
+ 0 0 1 0
+ 0 3.27083683 5.28184366 1
+ exposure 7
+ cast_shadows on
+ cast_volumetric_shadows on
+ shadow_density 1
+ samples 1
+ normalize on
+ diffuse 1
+ specular 1
+ sss 1
+ indirect 1
+ max_bounces 999
+ volume_samples 2
+ volume 1
+ aov "default"
+ vertices 4 1 b85VECTOR
+yaRT=dzaRT=daRT=dzaRT=dyzyyz
+ resolution 512
+ roundness 0
+ soft_edge 1
+ spread 1
+ declare maya_full_name constant STRING
+ maya_full_name "|areaLight|areaLightShape"
+}
+
+skydome_light
+{
+ name skydomeLightShape
+ matrix
+ 0.866025388 0 0.5 0
+ 0 1 0 0
+ -0.5 0 0.866025388 0
+ 0 0 0 1
+ color file2
+ intensity 0.5
+ exposure 0
+ cast_shadows on
+ cast_volumetric_shadows on
+ shadow_density 1
+ shadow_color 0 0 0
+ samples 1
+ normalize on
+ camera 1
+ transmission 1
+ diffuse 1
+ specular 1
+ sss 1
+ indirect 1
+ max_bounces 999
+ volume_samples 2
+ volume 1
+ aov "default"
+ resolution 1000
+ format "latlong"
+ portal_mode "interior_only"
+ aov_indirect off
+ declare maya_full_name constant STRING
+ maya_full_name "|skydomeLight|skydomeLightShape"
+}
+
+polymesh
+{
+ name bubbleGeoShape
+ visibility 255
+ sidedness 255
+ matrix
+ 1 0 0 0
+ 0 1 0 0
+ 0 0 1 0
+ 0 1.14428365 0 1
+ shader "Shader"
+ use_light_group off
+ id 3280031857
+ nsides 256 1 b85UINT
+B!%<_l4$$$$\!$v;Z0$$$$,
+ vidxs 992 1 b85UINT
+B)1qsF)MA0J)heBN*/4TR*JXfV*f'xZ+,L5^+GpGb+c?Yf,)ckj,E3(n,`W:r-'&Lv-BJ_%-]nq)-wVGb.?b@1.[1R5.vUd9/=$v=/XI3A/smEE0:<WI0U`iM0q0&Q17T8U1RxJY1nG\]24kna2P;+e2k_=i30FiM3MRaq3hvsu4/F1$4JjC(4f9U,5,]g05H-$45cQ686)uH<6EDZ@6`hlD7'8)H7B\;L7^+MP8$O_T8>7688[C.\8vg@`9=6Rd9XZdh9t)vl::N3p:UrEt:qAWx;7ej';S5'+;nY9/<5(K3<PL]7<kpo;=2@,?=L'Wx=i3PG>/WbK>K&tO>fK1S?,oCW?H>U[?cbg_@*2$c@EV6g@a%HkA'IZoABmlsA^=)wB$a<&B@0N*BYm$cBvxr2C=H/6CXlA:Ct;S>D:_eBDV.wFDqS4JE7wFNESFXREnjjVF5:'ZFP^9^Fl-KbG2Q]fGMuojGg]FNH/i>rHK8PvHf\c%I-+u)IHP2-IctD1J*CV5JEgh9Ja7%=K'[7AKC*IEK^N[IL$rmML@B*QL[f<ULuMh9M=Y`]MY(raMtM/eN:qAiNV@SmNqdeqO83wuOSX5$Oo'G(P5KY,PPok0Pl?(4Q2c:8QN2L<QiV^@R.>5$RKJ-HRfn?LS-=QPSHacTSd0uXT*U2\TF$D`TaHVdU'lhhUC<%lU^`7pV%/ItV@S[xV[wn'VwG++W<.VdWY:O3Wt^a7X;-s;XVR0?XqvBCY8ETGYSifKYo8xOZ5]5SZQ,GWZlPY[[2tk_[ND(c[ih:g\07Lk\IsxO\g*ps]-O-w]Hs@&]dBR*^*fd.^F5v2^aZ36_()E:_CMW>_^qiB`%A&F`@e8J`\4JN`wX\Ra>'nVaWdE:atp=^b;?ObbVcafbr2sjc8W0ncT&BrcoJTvd5ng%dQ>$)dlb6-e31H1eNUZ5ej$l9f0I)=fKm;AfeTg%g-`_IgI/qMgdT.Qh*x@UhFGRYhakd]i(:vaiC_3ei_.Eij%RWmj@viqj\F&ujwj9$k>9K(kY]],ksE3el;Q,4lVu>8lrDP<m8hb@mT7tDmo\1Hn6+CLnQOUPnlsgTo3C$XoNg6\oj6H`p0ZZdpL)lhpgN)lq,5UP$t93m$[(rpq/ljb&7Pd$%sdZ'q0<9j'Oh?0'7KA3q0`]r(h*o<(P2(?q1/QjlXSpem8WXjqc;d&mpkKqnQ>?vqc`3.o4.'(oj%'-qd/W6pLEW4q-`c9qblp.
+ uvidxs 992 1 b85UINT
+F$BbOI$'GFY$'IiJ$DL@S$Gm@3$,R7C$,TZ4$IW1=$Lx0r$1](-$1_Js$Naw'$R-v\$6gml$6j;]$Slgf$W8gF$;r^V$;u,G$XwXP$\CX0$BdfT$Bg4F$_i`O$c5`/$GoW?$Gr%0$dtQ9$h@Pn$M%H)$M'jo$j*Ax$mKAX$R08h$R2[Y$o52b$rV2B$W;)R$W=LC$t?xL$w`x,$\Eo<$^/H=%&2+K%)S++$c7w;$c:E,%+<q5%.]pj$hBh%$hE5k%0Gat%3haT$mMXd$mP&U%5RR^%8sR>$rXIN$rZl?%:]CH%>)C($wc:8$we])%?h42%DpK'%)UB7%)We(%FZ<1%J&;f%.`2v%.bUg%Ke,p%O1,P%3jx`%3mFQ%PorZ%T;r:%8uiJ%8x7;%V%cD%YFc$%>+Z4%>.(%%[0T.%^QSc%Drb2%Du0$%aw\-%eC[b%J(Rr%J*uc%g-Ll%jNLL%O3C\%O5fM%l8=V%oY=6%T>4F%T@W7%qC.@%td-u%YI%0%YKGv%vMt*&$ns_%^Sjo%`=Cp&(@')&+a&^%eErn%eH@_&-Jlh&0klH%jPcX%jS1I&2U]R&5v]2%o[TB%o]w3&7`N<&;,Mq%tfE,%thgr&<k?&&@7>[&$q5k&$sX\&Av/e&G)FZ&+c=j&+e`[&Hh7d&L47D&0n.T&0pQE&Ms(N&Q?(.&5xt>&6&B/&S(n8&VImm&;.e(&;12n&X3^w&[T^W&@9Ug&@;xX&]>Oa&`_OA&G+]e&G.+W&d0W`&gQW@&L6NP&L8qA&i;HJ&l\H*&QA?:&QCb+&nF94&qg8i&VL0$&VNRj&sQ)s&vr)S&[Vuc&[YCT&x[o]'''o=&`afM&bK?N'*Mw\'-nw<&gSnL&gV<='/XhF'3$h&&l^_6&la-''4cY0'8/Xe&qiOu&qkrf'9nIo'=:IO&vt@_&vvcP'?$:Y'BE:9''*1I'',T:'D/+C'I7B8'-q9H'-s\9'Jv3B'NB2w'3'*2'3)Lx'P,$,'SLxa'81oq'84=b'U6ik'XWiK'=<`['=?.L'ZAZU']bZ5'BGQE'BIt6'_LK?'bmJt'I9YC'I<'5'f>S>'i_Rs'NDJ.'NFlt'kID('njC]'SO:m'SQ]^'pT4g'su4G'XZ+W'X\NH'u_%Q($+%1']dqA']g?2(%ik;()5jp'bob+'dY;,(,[s:(0'ro'iaj*'id7p(1fd$(52cY'nlZi'no(Z(6qTc(:=TC'swKS't$nD(<'EM(?HE-($-<=($/_.(A267(DS5l()8-'():Om(F=&v(KE=k(0*5&(0,Wl(M/.u(PP.U(55%e(57HV(R9t_(UZt?(:?kO(:B9@(WDeI(Zee)(?J\9(?M**(\OV3(_pUh(DULx(DWoi(aZFr(e&FR(KGTv(KIwh(hLNq(kmNQ(PREa(PThR(mW?[(px?;(U]6K(U_Y<(rb0E(v.0%(Zh'5(ZjJ&(wlv/)&8ud(_rlt(_u:e)'wfn)+CfN(e(]^$&/&+$'kFD$)R]Y$+9tn$,v7.$.]NC$0DeX$2,'m$3h?-$5OVB$76mW$8s/l$:ZG,$<A^A$>(uV$?e7k(fiV^(hPpS(j82h(ktJ((m[a=(oBxR(q*:g(rfR'(tMi<(v5+Q(wqBf)$XZ&)&?q;)('3P))cJe)+Jb%$$LTJ
+ vlist 242 1 b85VECTOR
+7xh\WaR'^2`sUt37t3lfaR'^2a+$H17geCwaR'^2a/Y8&4[qc7aR'^2a192\`sUt5aR'^2a/Y8,a+$H3aR'^2a+$H;a/Y8(aR'^2`sUtJa192]aR'^2]a*'?a/Y8+aR'^27geCca+$H9aR'^27t3l_`sUtEaR'^27xh\S]PFveaR'^28%HW27geChaR'^27xh\T7t3l`aR'^27t3lb7xh\SaR'^27geCl8%HW2aR'^2z81+RiaPMR2a+sAP8,S<RaPMR2a8Cls7u-f?aPMR2a<q.94i/h3aPMR2a>NFVa+sASaPMR2a<q.>a8CltaPMR2a8Cm'a<q.:aPMR2a+sAga>NFWaPMR2]nGw/a<q.=aPMR27u-f+a8Cm&aPMR28,S<Ka+sAcaPMR281+Re]]SNiaPMR282]k,7u-f0aPMR281+Rf8,S<MaPMR28,S<N81+RfaPMR27u-f482]k,aPMR2z89JOuaMuuEa31nR838'OaMuuEa?(Wk8'A>MaMuuEaE;+G4p`80aMuuEaFH<Za31nVaMuuEaE;+Ja?(WnaMuuEa?(X$aE;+HaMuuEa31ntaFH<[aMuuE]uO2LaE;+JaMuuE8'A>0a?(WvaMuuE838'Ea31nmaMuuE89JOr]d(VMaMuuE8:Wa08'A>7aMuuE89JOs838'GaMuuE838'I89JOsaMuuE8'A>=8:Wa0aMuuEz8=;X?aJT2fa8Clk89+]gaJT2faDq9/8,S<XaJT2faI,3d4u--[aJT2faJT2ea8ClmaJT2faI,3iaDq91aJT2faDq9<aI,3faJT2fa8Cm+aJT2faJT2f^%oT0aI,3haJT2f8,S<EaDq9;aJT2f89+]^a8Cm'aJT2f8=;X;]i7J1aJT2f8>cW;8,S<JaJT2f8=;X=89+]aaJT2f89+]c8=;X<aJT2f8,S<M8>cW;aJT2fz8@GGJaFH<Za:vnw8;MnoaFH<ZaG>J:8/1>haFH<ZaL7wn4x`tIaFH<ZaMuuEa:vo%aFH<ZaL7wtaG>J<aFH<ZaG>JDaL7wpaFH<Za:vo;aMuuFaFH<Z^(I1.aL7wsaFH<Z8/1>SaG>JBaFH<Z8;Mnga:vo6aFH<Z8@GGF]lsd;aFH<Z8B0Dp8/1>XaFH<Z8@GGG8;MniaFH<Z8;Mnk8@GGFaFH<Z8/1>\8B0DpaFH<Zz8Bc\ga>NFVa<q.*8=;XBa>NFVaI,3a81+Rsa>NFVaNT865&Et4a>NFVaPMR1a<q.-a>NFVaNT8<aI,3ba>NFVaI,3laNT88a>NFVa<q.FaPMR2a>NFV^*@+saNT8<a>NFV81+R[aI,3ja>NFV8=;X9a<q.@a>NFV8Bc\c]nOn/a>NFV8D\v\81+Raa>NFV8Bc\e8=;X;a>NFV8=;X=8Bc\da>NFV81+Rf8D\v\a>NFVz8D3cia192_a>,9\8>D(Ua192_aJ4Xs82;^Ra192_aP$?75'LLqa192_aR'^1a>,9_a192_aP$?>aJ4Xua192_aJ4Y*aP$?9a192_a>,:$aR'^2a192_^+N4saP$?=a192_82;^9aJ4Y(a192_8>D(La>,9ta192_8D3cd]oMK/a192_8F7-\82;^?a192_8D3cf8>D(Na192_8>D(P8D3cea192_82;^D8F7-\a192_z8D\v`za>NFD8>cWAzaJT2_82]k;zaPMR.5'd3azaRT=ca>NFGzaPMR5aJT2azaJT2kaPMR0za>NFbaRT=dz^+o\DaPMR4z82]jvaJT2iz8>cW8a>NF\z8D\v[]oiANzy82]k'z8D\v]8>cW:z8>cW<8D\v\z82]k,yzz8D3ci8%HW4a>,9\8>D(U8%HW4aJ4Xs82;^R8%HW4aP$?75'LLq8%HW4aR'^1a>,9_8%HW4aP$?>aJ4Xu8%HW4aJ4Y*aP$?98%HW4a>,:$aR'^28%HW4^+N4saP$?=8%HW482;^9aJ4Y(8%HW48>D(La>,9t8%HW48D3cd]oMK/8%HW48F7-\82;^?8%HW48D3cf8>D(N8%HW48>D(P8D3ce8%HW482;^D8F7-\8%HW4z8Bc\g82]k+a<q.*8=;XB82]k+aI,3a81+Rs82]k+aNT865&Et482]k+aPMR1a<q.-82]k+aNT8<aI,3b82]k+aI,3laNT8882]k+a<q.FaPMR282]k+^*@+saNT8<82]k+81+R[aI,3j82]k+8=;X9a<q.@82]k+8Bc\c]nOn/82]k+8D\v\81+Ra82]k+8Bc\e8=;X;82]k+8=;X=8Bc\d82]k+81+Rf8D\v\82]k+z8@GGJ8:Wa/a:vnw8;Mno8:Wa/aG>J:8/1>h8:Wa/aL7wn4x`tI8:Wa/aMuuEa:vo%8:Wa/aL7wtaG>J<8:Wa/aG>JDaL7wp8:Wa/a:vo;aMuuF8:Wa/^(I1.aL7ws8:Wa/8/1>SaG>JB8:Wa/8;Mnga:vo68:Wa/8@GGF]lsd;8:Wa/8B0Dp8/1>X8:Wa/8@GGG8;Mni8:Wa/8;Mnk8@GGF8:Wa/8/1>\8B0Dp8:Wa/z8=;X?8>cW;a8Clk89+]g8>cW;aDq9/8,S<X8>cW;aI,3d4u--[8>cW;aJT2ea8Clm8>cW;aI,3iaDq918>cW;aDq9<aI,3f8>cW;a8Cm+aJT2f8>cW;^%oT0aI,3h8>cW;8,S<EaDq9;8>cW;89+]^a8Cm'8>cW;8=;X;]i7J18>cW;8>cW;8,S<J8>cW;8=;X=89+]a8>cW;89+]c8=;X<8>cW;8,S<M8>cW;8>cW;z89JOu8B0Doa31nR838'O8B0Doa?(Wk8'A>M8B0DoaE;+G4p`808B0DoaFH<Za31nV8B0DoaE;+Ja?(Wn8B0Doa?(X$aE;+H8B0Doa31ntaFH<[8B0Do]uO2LaE;+J8B0Do8'A>0a?(Wv8B0Do838'Ea31nm8B0Do89JOr]d(VM8B0Do8:Wa08'A>78B0Do89JOs838'G8B0Do838'I89JOs8B0Do8'A>=8:Wa08B0Doz81+Ri8D\v\a+sAP8,S<R8D\v\a8Cls7u-f?8D\v\a<q.94i/h38D\v\a>NFVa+sAS8D\v\a<q.>a8Clt8D\v\a8Cm'a<q.:8D\v\a+sAga>NFW8D\v\]nGw/a<q.=8D\v\7u-f+a8Cm&8D\v\8,S<Ka+sAc8D\v\81+Re]]SNi8D\v\82]k,7u-f08D\v\81+Rf8,S<M8D\v\8,S<N81+Rf8D\v\7u-f482]k,8D\v\z7xh\W8F7-\`sUt37t3lf8F7-\a+$H17geCw8F7-\a/Y8&4[qc78F7-\a192\`sUt58F7-\a/Y8,a+$H38F7-\a+$H;a/Y8(8F7-\`sUtJa192]8F7-\]a*'?a/Y8+8F7-\7geCca+$H98F7-\7t3l_`sUtE8F7-\7xh\S]PFve8F7-\8%HW27geCh8F7-\7xh\T7t3l`8F7-\7t3lb7xh\S8F7-\7geCl8%HW28F7-\zzaRT=dzzyz
+ uvlist 287 1 b85VECTOR2
+z!7e-P7$$$$'7reTb7e-P78$W,M7e-P78+HY87e-P78.koX7e-P782:0x7e-P785]GC7e-P789+]c7e-P78:ghs7e-P78<Nt.7e-P78>6*>7e-P78?r5N7e-P78AY@^7e-P78C@Kn7e-P78E'W)7e-P7y7e-P7z7reTb7e-P7!7reTb$$$$'8$W,M7reTb8+HY87reTb8.koX7reTb82:0x7reTb85]GC7reTb89+]c7reTb8:ghs7reTb8<Nt.7reTb8>6*>7reTb8?r5N7reTb8AY@^7reTb8C@Kn7reTb8E'W)7reTby7reTbz8$W,M7e-P78$W,M7reTb!8$W,M$$$$'8+HY88$W,M8.koX8$W,M82:0x8$W,M85]GC8$W,M89+]c8$W,M8:ghs8$W,M8<Nt.8$W,M8>6*>8$W,M8?r5N8$W,M8AY@^8$W,M8C@Kn8$W,M8E'W)8$W,My8$W,Mz8+HY87e-P78+HY87reTb8+HY88$W,M!8+HY8$$$$'8.koX8+HY882:0x8+HY885]GC8+HY889+]c8+HY88:ghs8+HY88<Nt.8+HY88>6*>8+HY88?r5N8+HY88AY@^8+HY88C@Kn8+HY88E'W)8+HY8y8+HY8z8.koX7e-P78.koX7reTb8.koX8$W,M8.koX8+HY8!8.koX$$$$'82:0x8.koX85]GC8.koX89+]c8.koX8:ghs8.koX8<Nt.8.koX8>6*>8.koX8?r5N8.koX8AY@^8.koX8C@Kn8.koX8E'W)8.koXy8.koXz82:0x7e-P782:0x7reTb82:0x8$W,M82:0x8+HY882:0x8.koX!82:0x$$$$'85]GC82:0x89+]c82:0x8:ghs82:0x8<Nt.82:0x8>6*>82:0x8?r5N82:0x8AY@^82:0x8C@Kn82:0x8E'W)82:0xy82:0xz85]GC7e-P785]GC7reTb85]GC8$W,M85]GC8+HY885]GC8.koX85]GC82:0x!85]GC$$$$'89+]c85]GC8:ghs85]GC8<Nt.85]GC8>6*>85]GC8?r5N85]GC8AY@^85]GC8C@Kn85]GC8E'W)85]GCy85]GCz89+]c7e-P789+]c7reTb89+]c8$W,M89+]c8+HY889+]c8.koX89+]c82:0x89+]c85]GC!89+]c$$$$'8:ghs89+]c8<Nt.89+]c8>6*>89+]c8?r5N89+]c8AY@^89+]c8C@Kn89+]c8E'W)89+]cy89+]cz8:ghs7e-P78:ghs7reTb8:ghs8$W,M8:ghs8+HY88:ghs8.koX8:ghs82:0x8:ghs85]GC8:ghs89+]c!8:ghs$$$$'8<Nt.8:ghs8>6*>8:ghs8?r5N8:ghs8AY@^8:ghs8C@Kn8:ghs8E'W)8:ghsy8:ghsz8<Nt.7e-P78<Nt.7reTb8<Nt.8$W,M8<Nt.8+HY88<Nt.8.koX8<Nt.82:0x8<Nt.85]GC8<Nt.89+]c8<Nt.8:ghs!8<Nt.$$$$'8>6*>8<Nt.8?r5N8<Nt.8AY@^8<Nt.8C@Kn8<Nt.8E'W)8<Nt.y8<Nt.z8>6*>7e-P78>6*>7reTb8>6*>8$W,M8>6*>8+HY88>6*>8.koX8>6*>82:0x8>6*>85]GC8>6*>89+]c8>6*>8:ghs8>6*>8<Nt.!8>6*>$$$$'8?r5N8>6*>8AY@^8>6*>8C@Kn8>6*>8E'W)8>6*>y8>6*>z8?r5N7e-P78?r5N7reTb8?r5N8$W,M8?r5N8+HY88?r5N8.koX8?r5N82:0x8?r5N85]GC8?r5N89+]c8?r5N8:ghs8?r5N8<Nt.8?r5N8>6*>!8?r5N$$$$'8AY@^8?r5N8C@Kn8?r5N8E'W)8?r5Ny8?r5Nz8AY@^7e-P78AY@^7reTb8AY@^8$W,M8AY@^8+HY88AY@^8.koX8AY@^82:0x8AY@^85]GC8AY@^89+]c8AY@^8:ghs8AY@^8<Nt.8AY@^8>6*>8AY@^8?r5N!8AY@^$$$$'8C@Kn8AY@^8E'W)8AY@^y8AY@^z8C@Kn7e-P78C@Kn7reTb8C@Kn8$W,M8C@Kn8+HY88C@Kn8.koX8C@Kn82:0x8C@Kn85]GC8C@Kn89+]c8C@Kn8:ghs8C@Kn8<Nt.8C@Kn8>6*>8C@Kn8?r5N8C@Kn8AY@^!8C@Kn$$$$'8E'W)8C@Kny8C@Knz8E'W)7e-P78E'W)7reTb8E'W)8$W,M8E'W)8+HY88E'W)8.koX8E'W)82:0x8E'W)85]GC8E'W)89+]c8E'W)8:ghs8E'W)8<Nt.8E'W)8>6*>8E'W)8?r5N8E'W)8AY@^8E'W)8C@Kn!8E'W)$$$$'y8E'W)7WJKaz7kt'wz7v3k-z8(%Bmz8-/dHz80S%hz83v<3z87DRSz89t8kz8;[D&z8=BO6z8?)ZFz8@eeVz8BLpfz8D4&vz8Ep21z7WJKay7kt'wy7v3k-y8(%Bmy8-/dHy80S%hy83v<3y87DRSy89t8ky8;[D&y8=BO6y8?)ZFy8@eeVy8BLpfy8D4&vy8Ep21y
+ smoothing on
+ subdiv_type "catclark"
+ subdiv_iterations 3
+ subdiv_adaptive_error 0
+ subdiv_adaptive_metric "auto"
+ subdiv_adaptive_space "raster"
+ subdiv_frustum_ignore off
+ subdiv_uv_smoothing "pin_corners"
+ subdiv_smooth_derivs off
+ step_size 0
+ volume_padding 0
+ declare maya_full_name constant STRING
+ maya_full_name "|bubbleGeo|bubbleGeoShape"
+}
+
+image
+{
+ name file2
+ filename "/Users/sosoyan/Documents/maya/projects/default/sourceimages/hdri_refl_v001.tx"
+ color_space ""
+ filter "smart_bicubic"
+ swrap "periodic"
+ twrap "periodic"
+ sscale 1
+ tscale 1
+ soffset 0
+ toffset 0
+ uvset ""
+ ignore_missing_textures on
+ missing_texture_color 0.5 0.5 0.5 0
+}
+
+standard_surface
+{
+ name Shader
+ base 0.0
+ emission 1.0
+ emission_color thinFilm
+ specular_roughness 0.00999999978
+ specular 0.0
+#specular_color thinFilm
+ specular_IOR 1.00300002
+#transmission 1
+ thin_film_thickness 250
+ thin_film_IOR 1.43382359
+}
+
+thinFilmInterference
+{
+name thinFilm
+#ior_inside 1.33
+#ior_outside 1.0
+#min_thick 300.0
+#max_thick 700.0
+#interference 0.0
+#multiplier 1.0
+}
+
+
