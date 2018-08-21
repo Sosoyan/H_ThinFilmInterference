@@ -1,12 +1,3 @@
-### exported: Tue Aug 21 22:48:56 2018
-### from:     Arnold 5.1.1.0 [e338d869] darwin clang-5.0.0 oiio-1.7.17 osl-1.9.0 vdb-4.0.0 clm-1.0.3.513 rlm-12.2.2 2018/05/22 13:19:57
-### host app: MtoA 3.0.1 bf13ff9e (master) Maya 2018
-### user: sosoyan
-### render_layer: defaultRenderLayer
-### scene: /Users/sosoyan/Documents/maya/projects/default/scenes/bubble.mb
-
-
-
 options
 {
  AA_samples 0
