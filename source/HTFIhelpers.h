@@ -63,16 +63,16 @@ float H_SIGNF( float input ) {
 
 
 // AiPoint2Col - convert arnold vector to color
-AtColor AiPoint2Col (AtPoint *point)
+AtRGB AiPoint2Col (AtVector *point)
 
 	{
-		AtColor color;
+		AtRGB color;
 		float At_x, At_y, At_z;
 
         At_x = (*point).x;
         At_y = (*point).y;
         At_z = (*point).z;
-        color = AiColor(At_x, At_y, At_z);
+        color = AtRGB(At_x, At_y, At_z);
 
         return color;
 	}
@@ -146,8 +146,7 @@ AtVector Wavelength_to_RGB(float wl)
 
     SSS *= 255;
 
-    AtVector returnVec;
-    AiV3Create(returnVec, SSS*R/255, SSS*G/255, SSS*B/255);
+    AtVector returnVec(SSS*R/255, SSS*G/255, SSS*B/255);
     return returnVec;
 }
 
